@@ -28,7 +28,7 @@ const getWeather = async function () {
     const lat = place_data.latitude;
     const long = place_data.longitude;
 
-    const apiKey = "86d0881d8f9399f4b51f2a66922e1d9d";
+    const apiKey = process.env.Weather_API_KEY;
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=metric`;
 
     const weather_response = await axios(apiUrl);
